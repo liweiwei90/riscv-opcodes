@@ -52,12 +52,14 @@ csrs = [
   (0x001, 'fflags'),
   (0x002, 'frm'),
   (0x003, 'fcsr'),
+  (0x006, 'lplr'), #Zisslpcfi
   (0x008, 'vstart'),
   (0x009, 'vxsat'),
   (0x00A, 'vxrm'),
   (0x00F, 'vcsr'),
   (0x015, 'seed'), # Zkr
   (0x017, 'jvt'), # Zcmt
+  (0x020, 'ssp'), #Zisslpcfi
 
   # Standard User RO
   (0xC00, 'cycle'),
@@ -543,6 +545,9 @@ arg_lut['imm6'] = (25, 20)
 arg_lut['zimm'] = (19, 15)
 arg_lut['opcode'] = (6,0)
 arg_lut['funct7'] = (31,25)
+arg_lut['llpl'] = (23,15)
+arg_lut['mlpl'] = (22,15)
+arg_lut['ulpl'] = (22,15)
 
 # for vectors
 arg_lut['vd'] = (11, 7)
